@@ -1,0 +1,154 @@
+.back_card{
+    .front{
+        transform: perspective(600px) rotateY(-180deg) !important; 
+    }
+    .back {
+        transform: perspective(600px) rotateY(0deg) !important; 
+    }
+}
+.card {
+    position: relative;
+    width: 400px;
+    height: 250px;
+    margin: 0 auto;
+
+    .front, .back{
+        position: relative;
+        background-image: url('../assets/card-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: transform .6s linear;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35), 0 10px 10px rgba(0, 0, 0, 0.32);
+    }
+    .front{
+        transform: perspective(600px) rotateY(0deg);
+    }
+    .back{
+        transform: perspective(600px) rotateY(180deg);
+    }
+    img{
+        height: 100%;
+        
+    }
+    // &:hover{
+    //     .front{
+    //         transform: perspective(600px) rotateY(-180deg);
+    //     }
+    //     .back {
+    //         transform: perspective(600px) rotateY(0deg); 
+    //     }
+    // }
+    .icon{
+        display: block;
+        color: $card-icon-color;
+        margin-left: auto;
+    }
+    .number_border{
+        border-color: $active-border-color !important;
+    }
+    .number{
+        transition-property: border;
+        transition-duration: 0.4s;
+        border: $default-border;
+        border-radius: 4px;
+        display: block;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 40px;
+        display: block;
+        text-align: center;
+        color: $card-text-color;
+        font-size: 26px;
+    }
+    .bottom{
+        margin-top: 50px;
+        display: flex;
+        padding: 0 20px;
+        justify-content: space-between;
+        margin-bottom: auto;
+        .holder,.expires{
+            span{
+                
+                font-size: 18px;
+                color: #999;
+            }
+        }
+        .holder_border{
+            border-color: $active-border-color !important;     
+        }
+        .holder{
+            transition-property: border;
+            transition-duration: 0.4s;
+            padding: 2px;
+            border: $default-border;
+            border-radius: 4px;
+            p{
+                font-size: 20px;
+                text-transform: uppercase;
+                color: $card-text-color;
+            }
+        }
+        .expires_border{
+            border-color: $active-border-color !important;    
+        }
+        .expires{
+            border: $default-border;
+            border-radius: 4px;
+            width: 80px;
+            span{
+                display: block;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: $card-text-color;
+            }  
+        }
+    }
+    .line{
+        display: block;
+        width: 100%;
+        height: 50px;
+        background-color: #000;
+        margin-top: 40px;
+    }
+    .cvv{
+        transition-property: border;
+        transition-duration: 0.4s;
+        border: $default-border;
+        border-radius: 4px;
+        padding: 4px;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 20px;
+        span{
+            display: block;
+            margin-bottom: 2px;
+            text-align: right;
+            margin-right: 70px;
+            color: lightgray;
+            font-size: 14px;
+        }
+        p{
+            display: block;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 4px;
+            width: 60%;
+            height: 30px;
+            color: #000;
+            font-size: 20px;
+            padding-top: 2px;
+            text-align: right;
+            padding-right: 6px;
+        }
+    }
+}

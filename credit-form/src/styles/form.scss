@@ -1,0 +1,118 @@
+.card-form{
+    display: block;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 100px;
+    form {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35), 0 10px 10px rgba(0, 0, 0, 0.32);
+        max-width: 600px;
+        height: 600px;
+        padding: 160px 40px 20px 40px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: -100px;
+        .form-block{
+            display: block;
+            margin-top: 20px;
+            height: 64px;
+        }
+        .input_invalid {
+            border-color: $invalid-border-color;
+            margin-bottom:2px;
+        }
+        label{
+            color: $form-label-color;
+            display: block;
+        }
+        input{
+            color: $form-text-color;
+            width: 100%;
+            height: 30px;
+            border-radius: 5px;
+            font-size: $input-font-size;
+            border: $input-border;
+            &:hover{
+                border-color: $input-hover-color;
+            }
+            &:focus{
+                border-color: $input-focus-color;
+            }
+        }
+        .info{
+            display: flex;
+            justify-content: space-between;
+            label{
+                display: block;
+                margin-bottom: 5px;
+            }
+            select{
+                height: 30px;
+                width: 60px;
+                border: $input-border;
+                &:hover{
+                    border-color: $input-hover-color;
+                }
+                &:focus{
+                    border-color: $input-focus-color;
+                }
+            }
+            .exp-year{
+                width: 70px;
+            }
+            span{
+                font-size: 20px;
+                display: inline-block;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+        button[type=submit]{
+            display: block;
+            cursor: pointer;
+            margin-top: 26px;
+            width: 100%;
+            height: 30px;
+            background-color: lightblue;
+            border: $button-border;
+            border-radius: 6px;
+            font-size: 18px;
+            transition: 0.4s;
+            &:hover{
+                background-color: cornflowerblue; 
+            }
+        }
+        .show-btn{
+            cursor: pointer;
+            display: inline-block;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+        .cvv_input{
+            display: inline-block;
+            width: 84%;
+        }
+        .invalid-msg{
+            font-size: 16px;
+            color: red;
+        }
+    }
+
+}
+
+@media(max-width:500px){
+    .card-form{
+        form{
+            .info{
+                flex-direction: column;
+                height: 136px;
+                .cvv{
+                    margin-top: 20px;
+                    
+                }
+            }
+        }
+    }
+}
